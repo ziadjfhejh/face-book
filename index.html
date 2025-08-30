@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول</title>
+  <style>
+    body{font-family:Arial, sans-serif;background:#f0f2f5;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+    .box{background:#fff;padding:24px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.12);width:320px}
+    h2{margin:0 0 12px}
+    input,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ddd;font-size:14px}
+    button{background:#1877f2;color:#fff;border:none;font-weight:bold;cursor:pointer}
+    button:hover{background:#166fe0}
+    .hint{font-size:12px;color:#666;text-align:center;margin-top:6px}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center}
+    .modal{background:#fff;padding:20px;border-radius:12px;max-width:360px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>تسجيل الدخول</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" required>
+      <input type="password" placeholder="كلمة السر" required>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+    <div class="hint"> موقع حقيقي جدا </div>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h3>صبح يا كينج</h3>
+      <p>.</p>
+      <button id="okBtn">تمام</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const overlay = document.getElementById('overlay');
+    const okBtn = document.getElementById('okBtn');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      // مهم: ما بنقرأش ولا بنخزن أي قيمة من الحقول هنا إطلاقًا.
+      overlay.style.display = 'flex';
+    });
+
+    okBtn.addEventListener('click', function(){
+      // تقدر تغيّر الرابط لفيديو مضحك أو صفحة من اختيارك
+      window.location.href = 'https://example.com/';
+    });
+  </script>
+</body>
+</html>
