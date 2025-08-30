@@ -2,35 +2,87 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>تسجيل الدخول</title>
+  <title>تسجيل الدخول - موقع تجريبي</title>
   <style>
-    body{font-family:Arial, sans-serif;background:#f0f2f5;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
-    .box{background:#fff;padding:24px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.12);width:320px}
-    h2{margin:0 0 12px}
-    input,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ddd;font-size:14px}
-    button{background:#1877f2;color:#fff;border:none;font-weight:bold;cursor:pointer}
-    button:hover{background:#166fe0}
-    .hint{font-size:12px;color:#666;text-align:center;margin-top:6px}
-    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center}
-    .modal{background:#fff;padding:20px;border-radius:12px;max-width:360px;text-align:center}
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.12);
+      width: 320px;
+      text-align: center;
+    }
+    h2 {
+      margin: 0 0 12px;
+      color: #333;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #357ab8;
+    }
+    .hint {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 360px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div class="box">
     <h2>تسجيل الدخول</h2>
     <form id="loginForm">
-      <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" required>
-      <input type="password" placeholder="كلمة السر" required>
-      <button type="submit">تسجيل الدخول</button>
+      <input type="text" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">دخول</button>
     </form>
-   <div class="hint" style="color: red; font-weight: bold;">
-  هذا الموقع تجريبي لأغراض التعليم فقط ولا يتم تخزين أي معلومات شخصية.
-  <div>
+    <div class="hint">
+      هذا الموقع تجريبي للتسلية فقط 🚀
+    </div>
   </div>
+
   <div class="overlay" id="overlay">
     <div class="modal">
-      <h3>صبح يا كينج</h3>
-      <p>.</p>
+      <h3>😂 مقلب جامد</h3>
+      <p>يا معلم اتهزرت عليك!</p>
       <button id="okBtn">تمام</button>
     </div>
   </div>
@@ -46,8 +98,8 @@
     });
 
     okBtn.addEventListener('click', function(){
-      // تقدر تغيّر الرابط لفيديو مضحك أو صفحة من اختيارك
-      window.location.href = 'https://example.com/';
+      // هنا حط أي لينك تحبه، مثلاً فيديو يوتيوب مقلب
+      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
     });
   </script>
 </body>
